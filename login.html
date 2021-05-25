@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>registration form</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+  * {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+            background-image: url(i.jpg);
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+           background-size: cover;
+ 
+}
+
+.header {
+  width: 30%;
+  margin: 50px auto 0px;
+  color: white;
+  background: black;
+  text-align: center;
+  border: 1px solid #B0C4DE;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+form, .content {
+  width: 30%;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #B0C4DE;
+ background: #a8a8a8;
+  border-radius: 0px 0px 10px 10px;
+}
+.input {
+  margin: 10px 0px 10px 0px;
+}
+.input label {
+  display: block;
+  text-align: left;
+  margin: 3px;
+
+}
+.input input {
+  height: 30px;
+  width: 93%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.btn {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 1cm;
+  padding-right: 1cm;
+  font-size: 15px;
+  color: white;
+  background: black;
+  border: none;
+  margin-left: 4.3cm;
+  margin-top: 1cm;
+  border-radius: 5px;
+}
+.error {
+  width: 92%;
+  margin: 0px auto;
+  padding: 10px;
+  border: 1px solid #a94442;
+  color: #a94442;
+  background: #f2dede;
+  border-radius: 5px;
+  text-align: left;
+}
+.success {
+  color: #3c763d;
+  background: #dff0d8;
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+ 
+}
+</style>
+<script>
+  function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "" || x == null) {
+      alert(" Must be filled out");
+      return false;
+    }
+  }
+  </script>
+<body>
+<div class="header">
+<h2>ADMIN LOGIN</h2>
+</div>
+<form method="post" action="admindisplay.php" onsubmit="return validateForm()">
+<div class="input">
+<label>USERNAME</label>
+<input type="text" name="username" oninvalid="alert('invalid username');"required  pattern="shivani.vp">
+</div>
+
+<div class="input">
+<label>PASSWORD</label>
+<input type="password" name="password_1" oninvalid="alert('invalid password');" required  pattern="1234">
+</div>
+
+<div class='input'>
+<button type="submit" name="login" class="btn">LOGIN</button>
+</div>
+<P>
+
+</form>
+</body>
+</html>
